@@ -20,20 +20,17 @@ const pCodigo = document.getElementById("codigo");
 const imgClima = document.getElementById("imagen-clima");
 
 function cargarClima(nombreLocalidad) {
-    console.log(`2. Ejecutando cargarClima para: ${nombreLocalidad}`);
     const url = lugares[nombreLocalidad];
     pNombre.textContent = `Localidad: ${nombreLocalidad}`;
 
     fetch(url)
         .then(response => {
-            console.log("3. Respuesta de la API recibida:", response);
             if (!response.ok) {
                 throw new Error(`Error HTTP: ${response.status}`);
             }
             return response.json();
         })
         .then(data => {
-            console.log("4. Datos JSON de la API procesados:", data);
             
             const fechaHoraDato = data.current.time;
             const temp = data.current.temperature_2m;
@@ -56,10 +53,8 @@ function cargarClima(nombreLocalidad) {
             pCodigo.textContent = `Estado del cielo: ${descripcionClima}`;
             
             imgClima.src = `${RUTA_IMAGENES}${archivoImagen}`;
-            console.log("5. ¡Datos pintados en pantalla con éxito!");
         })
         .catch(error => {
-            console.error("Error en el bloque catch:", error);
             pTemperatura.textContent = "Temperatura: Error al cargar";
         });
 }
