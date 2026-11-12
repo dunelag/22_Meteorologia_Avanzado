@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clima en Directo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Consulta el Clima</h1>
+
+    <label for="selector-localidades">Elige una localidad: </label>
+    <select id="selector-localidades">
+      <option value="Merida">Mérida</option>
+      <option value="Madrid">Madrid</option>
+      <option value="Barcelona">Barcelona</option>
+    </select>
+
+    <div style="margin-top: 20px">
+      <p id="nombre-localidad">Localidad: -</p>
+      <p id="fecha-hora">Fecha y hora: -</p>
+      <p id="temperatura">Temperatura: -</p>
+      <p id="humedad">Humedad relativa: -</p>
+      <p id="viento">Velocidad del viento: -</p>
+      <p id="codigo">Estado del cielo: -</p>
+      <img id="imagen-clima" src="" alt="imagen clima" width="80" />
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
