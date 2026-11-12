@@ -8,7 +8,7 @@ const lugares = {
     Barcelona: "https://api.open-meteo.com/v1/forecast?latitude=41.38879&longitude=2.158972&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&timezone=Europe%2FBerlin"
 };
 
-const RUTA_IMAGENES = "node_modules/@meteocons/svg/fill/";
+const RUTA_IMAGENES = "img/";
 
 const selector = document.getElementById("selector-localidades");
 const pNombre = document.getElementById("nombre-localidad");
