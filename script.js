@@ -64,11 +64,9 @@ function cargarClima(nombreLocalidad) {
         });
 }
 
-console.log("Iniciando carga por defecto con:", selector.value);
 cargarClima(selector.value);
 
 selector.addEventListener("change", (event) => {
-    console.log("Cambio de selector detectado:", event.target.value);
     cargarClima(event.target.value);
 });
 
